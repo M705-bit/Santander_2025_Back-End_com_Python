@@ -67,16 +67,6 @@ class contaCorrente(Banco, User):
 
         print(f'O seu saldo atual é de R${self.saldo:.2f}\n')
 
-class User: 
-    def __init__(self, nome = str, data_de_nascimento = str, cpf = int, endereco = str):
-        self.nome = nome
-        self.data_de_nascimento = data_de_nascimento
-        self.cpf = cpf
-        self.endereco = endereco
-        self.contas = []
-    def add_conta(self, conta):
-        self.contas.append(conta)
-
 def isdigit(input):
          var = "0123456789"
          for i in range(len(var)):
@@ -129,7 +119,7 @@ def main():
                 user = User(nome, nascimento, id)
                 nova_conta = contaCorrente(id)
                 banco.contas.append(nova_conta)
-                print(f" Conta {nova_conta.nmr_conta} criada")
-    
+                print(f" Conta {nova_conta.nmr_conta} criada")   
+                
 main()
 
